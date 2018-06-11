@@ -29,31 +29,31 @@ $(document).ready(function() {
         // We store all of the retrieved data inside of an object called "response"
     }).done(function(response) {
 
+            $(".city").html("<h4 class='date'>" + today + "</h4>")
+            $(".city").append("<h2 class='city-name' style='text-align: center;'>" + response.name + ", " + response.sys.country + "</h2>" +
+                "<h3 class='temperature' style='text-align: center;'>" + response.main.temp + "°F" + "</h3>");
+
+            if (response.weather[0].main === "Clear") {
+                console.log(response);
+                $(".city").append("<img src='./assets/imgs/clear.svg' style='height: 50px; width: 50px;'><p class='status' style='text-align:center;'>" + response.weather[0].main + "</p>" + "<div class='pa4'><div class='overflow-auto'><table class='f6 w-100 mw8' cellspacing='0><tbody class='lh-copy'><tr class='stripe-dark'><td class='pa3'> Wind </td><td class='pa3'>" +
+                    response.wind.speed + " m/s</td></tr><tr class='stripe-dark'><td class='pa3'> Humidity </td><td class='pa3'> " + response.main.humidity + " % </td></tr><tr class='stripe-dark'><td class='pa3'> Sunrise </td><td class='pa3'> " +
+                    response.sys.sunrise + "</td></tr><tr class='stripe-dark'><td class='pa3'> Sunset </td><td class='pa3'> " + response.sys.sunset + "</td></tr></thead>");
+
+            } else if (response.weather[0].main === "Clouds") {
+                $(".city").append("<img src='./assets/imgs/cloud.svg' style='height: 50px; width: 50px;'><p class='status' style='text-align:center;'>" + response.weather[0].main + "</p>" + "<div class='pa4'><div class='overflow-auto'><table class='f6 w-100 mw8' cellspacing='0><tbody class='lh-copy'><tr class='stripe-dark'><td class='pa3'> Wind </td><td class='pa3'>" +
+                    response.wind.speed + " m/s</td></tr><tr class='stripe-dark'><td class='pa3'> Humidity </td><td class='pa3'> " + response.main.humidity + " % </td></tr><tr class='stripe-dark'><td class='pa3'> Sunrise </td><td class='pa3'> " +
+                    response.sys.sunrise + "</td></tr><tr class='stripe-dark'><td class='pa3'> Sunset </td><td class='pa3'> " + response.sys.sunset + "</td></tr></thead>");
+            } else if (response.weather[0].main === "Mist" || "Haze") {
+                $(".city").append("<img src='./assets/imgs/mist.svg' style='height: 50px; width: 50px;'><p class='status' style='text-align:center;'>" + response.weather[0].main + "</p>" + "<div class='pa4'><div class='overflow-auto'><table class='f6 w-100 mw8' cellspacing='0><tbody class='lh-copy'><tr class='stripe-dark'><td class='pa3'> Wind </td><td class='pa3'>" +
+                    response.wind.speed + " m/s</td></tr><tr class='stripe-dark'><td class='pa3'> Humidity </td><td class='pa3'> " + response.main.humidity + " % </td></tr><tr class='stripe-dark'><td class='pa3'> Sunrise </td><td class='pa3'> " +
+                    response.sys.sunrise + "</td></tr><tr class='stripe-dark'><td class='pa3'> Sunset </td><td class='pa3'> " + response.sys.sunset + "</td></tr></thead>");
+
+            } else if (response.weather[0].main === "Rain") {
+                $(".city").append("<img src='./assets/imgs/rain.svg' style='height: 50px; width: 50px;'><p class='status' style='text-align:center;'>" + response.weather[0].main + "</p>" + "<div class='pa4'><div class='overflow-auto'><table class='f6 w-100 mw8' cellspacing='0><tbody class='lh-copy'><tr class='stripe-dark'><td class='pa3'> Wind </td><td class='pa3'>" +
+                    response.wind.speed + " m/s</td></tr><tr class='stripe-dark'><td class='pa3'> Humidity </td><td class='pa3'> " + response.main.humidity + " % </td></tr><tr class='stripe-dark'><td class='pa3'> Sunrise </td><td class='pa3'> " +
+                    response.sys.sunrise + "</td></tr><tr class='stripe-dark'><td class='pa3'> Sunset </td><td class='pa3'> " + response.sys.sunset + "</td></tr></thead>");
+            }
         
-        $(".city").html("<h4 class='date'>" + today + "</h4>")
-        $(".city").append("<h2 class='city-name' style='text-align: center;'>" + response.name + ", " + response.sys.country + "</h2>" +
-            "<h3 class='temperature' style='text-align: center;'>" + response.main.temp + "°F" + "</h3>");
-
-        if (response.weather[0].main === "Clear") {
-            console.log(response);
-            $(".city").append("<img src='./assets/imgs/clear.svg' style='height: 50px; width: 50px;'><p class='status' style='text-align:center;'>" + response.weather[0].main + "</p>" + "<div class='pa4'><div class='overflow-auto'><table class='f6 w-100 mw8' cellspacing='0><tbody class='lh-copy'><tr class='stripe-dark'><td class='pa3'> Wind </td><td class='pa3'>" +
-                response.wind.speed + " m/s</td></tr><tr class='stripe-dark'><td class='pa3'> Humidity </td><td class='pa3'> " + response.main.humidity + " % </td></tr><tr class='stripe-dark'><td class='pa3'> Sunrise </td><td class='pa3'> " +
-                response.sys.sunrise + "</td></tr><tr class='stripe-dark'><td class='pa3'> Sunset </td><td class='pa3'> " + response.sys.sunset + "</td></tr></thead>");
-
-        } else if (response.weather[0].main === "Clouds") {
-            $(".city").append("<img src='./assets/imgs/cloud.svg' style='height: 50px; width: 50px;'><p class='status' style='text-align:center;'>" + response.weather[0].main + "</p>" + "<div class='pa4'><div class='overflow-auto'><table class='f6 w-100 mw8' cellspacing='0><tbody class='lh-copy'><tr class='stripe-dark'><td class='pa3'> Wind </td><td class='pa3'>" +
-                response.wind.speed + " m/s</td></tr><tr class='stripe-dark'><td class='pa3'> Humidity </td><td class='pa3'> " + response.main.humidity + " % </td></tr><tr class='stripe-dark'><td class='pa3'> Sunrise </td><td class='pa3'> " +
-                response.sys.sunrise + "</td></tr><tr class='stripe-dark'><td class='pa3'> Sunset </td><td class='pa3'> " + response.sys.sunset + "</td></tr></thead>");
-        } else if (response.weather[0].main === "Mist") {
-            $(".city").append("<img src='./assets/imgs/mist.svg' style='height: 50px; width: 50px;'><p class='status' style='text-align:center;'>" + response.weather[0].main + "</p>" + "<div class='pa4'><div class='overflow-auto'><table class='f6 w-100 mw8' cellspacing='0><tbody class='lh-copy'><tr class='stripe-dark'><td class='pa3'> Wind </td><td class='pa3'>" +
-                response.wind.speed + " m/s</td></tr><tr class='stripe-dark'><td class='pa3'> Humidity </td><td class='pa3'> " + response.main.humidity + " % </td></tr><tr class='stripe-dark'><td class='pa3'> Sunrise </td><td class='pa3'> " +
-                response.sys.sunrise + "</td></tr><tr class='stripe-dark'><td class='pa3'> Sunset </td><td class='pa3'> " + response.sys.sunset + "</td></tr></thead>");
-
-        } else if (response.weather[0].main === "Rain") {
-            $(".city").append("<img src='./assets/imgs/rain.svg' style='height: 50px; width: 50px;'><p class='status' style='text-align:center;'>" + response.weather[0].main + "</p>" + "<div class='pa4'><div class='overflow-auto'><table class='f6 w-100 mw8' cellspacing='0><tbody class='lh-copy'><tr class='stripe-dark'><td class='pa3'> Wind </td><td class='pa3'>" +
-                response.wind.speed + " m/s</td></tr><tr class='stripe-dark'><td class='pa3'> Humidity </td><td class='pa3'> " + response.main.humidity + " % </td></tr><tr class='stripe-dark'><td class='pa3'> Sunrise </td><td class='pa3'> " +
-                response.sys.sunrise + "</td></tr><tr class='stripe-dark'><td class='pa3'> Sunset </td><td class='pa3'> " + response.sys.sunset + "</td></tr></thead>");
-        }
     });
 });
 
