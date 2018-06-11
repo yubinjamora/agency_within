@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html land="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yubin Jamora | Front-End Developer Test</title>
+    <!--  <link rel="icon" size="16x16" href="assets/images/food2.png"> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" media="screen">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:light|Martel:light|Work+Sans:regular|Poiret+One" rel="stylesheet">
+</head>
+
+<body>
+    <header class="ph6-l ph5-m pv4">
+        <nav class="dt w-100 border-box">
+            <a class="dtc v-mid w-25" href="index.html" title="Home">
+                <img src="./assets/imgs/fivecasts.png" class="ph4-m w-20-s" atl="Home Page">
+            </a>
+            <div class="dtc v-mid w-75 tr ttl tracked f6">
+               <a class="link black dib mr3 mr4-ns" href="newyork.html"><p>New York</p></a>
+                <a class="link black dib mr3 mr4-ns" href="tokyo.html"><p>Tokyo</p></a>
+                <a class="link black dib mr3 mr4-ns" href="london.html"><p>London</p></a>
+                <a class="link black dib mr3 mr4-ns" href="greece.html"><p>Athens</p></a>
+                <a class="link black dib" href="korea.html"><p>Seoul</p></a>
+            </div>
+        </nav>
+    </header>
+    <br>
+    
+    
+        <div class="outline-0 w-100">
+            <div class="city">
+            </div>
+            <div class="currentWeather">
+            </div>
+        </div>
+
+        
+    
+        <div id="map-canvas"></div>
+
+     <br> 
+    <section class="w-100 border-box ph6-l ph5-m ph3 pt3-ns pt2" title="details">
+        <h3 class="fivedaysweather" style="text-align: left;">5-Day Weather</h3>
+        <div class="flex">
+            <div class="outline w-20">
+                <div class="dayOne" style="text-align: center">
+                </div>
+                <br>
+                <div class="detailsOne">
+                </div>
+            </div>
+            <div class="outline w-20 ">
+                <div class="dayTwo" style="text-align: center">
+                </div>
+                <br>
+                <div class="detailsTwo">
+                </div>
+            </div>
+            <div class="outline w-20 ">
+                <div class="dayThree" style="text-align: center">
+                </div>
+                <br>
+                <div class="detailsThree">
+                </div>
+            </div>
+            <div class="outline w-20 ">
+                <div class="dayFour" style="text-align: center">
+                </div>
+                <br>
+                <div class="detailsFour">
+                </div>
+            </div>
+            <div class="outline w-20 ">
+                <div class="dayFive" style="text-align: center">
+                </div>
+                <br>
+                <div class="detailsFive">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<footer class="w-100">
+    <div class="cf fl w-100 ph6-l ph5-m ph3 tc pt5-l pt3">
+        <hr class="ba b--black center">
+        <div class="w-100 ttu pv2 track flex justify-center pt0-l pt4" id="ssn">
+            <a class="link hover-silver near-black dib h3 w3" href="https://github.com/yubinjamora" title="github">
+                    <img src="./assets/imgs/github.svg">
+                </a> &nbsp;&nbsp;
+            <a class="link hover-silver near-black dib h3 w3" href="https://www.linkedin.com/in/yubin-jamora-410b02b5/" title="linkedin">
+                    <img src="./assets/imgs/linkedin.svg">
+                </a> &nbsp;&nbsp;
+            <a class="link hover-silver near-black dib h3 w3" href="mailto:yubinlee0726@gmail.com" title="email">
+                    <img src="./assets/imgs/email.svg">
+                </a>
+        </div>
+        <div class="w-100 ttu pv1 track flex justify-center" id="copyrighnt">
+            <p style="font-size: 10px; color:gray">© 2018 fivecasts.com All Rights Reserved.</p>
+        </div>
+</footer>
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js "></script>
+<!-- Code to the JavaScript File -->
+<script type="text/javascript" src="assets/javascript/greece.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpaUjLMiieTgY6GB8uhU2Kfl-r-zbiiYQ"></script>
+<script type="text/javascript" src="assets/javascript/athensmap.js"></script>
+
+</html>
