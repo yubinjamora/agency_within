@@ -266,22 +266,22 @@ $(document).ready(function() {
                 $(".dayFive").append("<h4>Fri</h4>");
             }
             else if (currentDay + 4 === 6) {
-                $(".dayFour").append("<h4>Sat</h4>");
+                $(".dayFive").append("<h4>Sat</h4>");
             }
             else if (currentDay + 4 === 7) {
-                $(".dayFour").append("<h4>Sun</h4>");
+                $(".dayFive").append("<h4>Sun</h4>");
             }
             else if (currentDay + 4 === 8) {
-                $(".dayFour").append("<h4>Mon</h4>");
+                $(".dayFive").append("<h4>Mon</h4>");
             }
             else if (currentDay + 4 === 9) {
-                $(".dayFour").append("<h4>Tue</h4>");
+                $(".dayFive").append("<h4>Tue</h4>");
             }
             else if (currentDay + 4 ===  10) {
-                $(".dayFour").append("<h4>Wed</h4>");
+                $(".dayFive").append("<h4>Wed</h4>");
             }
             else if (currentDay + 4 === 4) {
-                $(".dayFour").append("<h4>Thu</h4>");
+                $(".dayFive").append("<h4>Thu</h4>");
             }
 
             if (response.list[23].weather[0].main === "Clear") {
