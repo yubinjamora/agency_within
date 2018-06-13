@@ -197,19 +197,19 @@ $(document).ready(function() {
                 response.list[0].main.temp_min  + " °F</p>")
             } 
             
-            else if (esponse.list[16].weather[0].main === "Clouds") {
+            else if (response.list[16].weather[0].main === "Clouds") {
                  $(".detailsThree").html("<img src='./assets/imgs/cloud.svg' style='height: 50px; width: 50px;'><p>"  + 
                     "<br> High " + response.list[0].main.temp_max + " °F <br> Low " + 
                 response.list[0].main.temp_min  + " °F</p>")
             } 
             
-            else if (esponse.list[16].weather[0].main === "Mist") {
+            else if (response.list[16].weather[0].main === "Mist") {
                  $(".detailsThree").html("<img src='./assets/imgs/mist.svg' style='height: 50px; width: 50px;'><p>"  + 
                     "<br> High " + response.list[0].main.temp_max + " °F <br> Low " + 
                 response.list[0].main.temp_min  + " °F</p>")
             } 
             
-            else if (esponse.list[16].weather[0].main === "Rain") {
+            else if (response.list[16].weather[0].main === "Rain") {
                  $(".detailsThree").html("<img src='./assets/imgs/rain.svg' style='height: 50px; width: 50px;'><p>"  + 
                     "<br> High " + response.list[0].main.temp_max + " °F <br> Low " + 
                 response.list[0].main.temp_min  + " °F</p>")
