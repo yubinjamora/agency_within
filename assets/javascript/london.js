@@ -69,7 +69,7 @@ $(document).ready(function() {
 
     
         $.ajax({
-            url: "https://api.openweathermap.org/data/2.5/forecast?id=264371&units=imperial&appid=" + APIKey,
+            url: "https://api.openweathermap.org/data/2.5/forecast?id=6058560&units=imperial&appid=" + APIKey,
             method: "GET"
             // We store all of the retrieved data inside of an object called "response"
         }).done(function(response) {
